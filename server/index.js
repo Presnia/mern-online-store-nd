@@ -28,5 +28,5 @@ const start = async () => {
     }
 }
 
-start().then();
+start();
 

@@ -10,7 +10,6 @@ const User = sequelize.define('user', {
 
 const Basket = sequelize.define('basket', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    email: {type: DataTypes.STRING, allowNull: false},
 });
 
 const BasketDevice = sequelize.define('basket_device', {
