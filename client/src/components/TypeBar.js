@@ -5,8 +5,9 @@ import {ListGroup, ListGroupItem} from "react-bootstrap";
 
 const TypeBar = observer(() => {
     const {device} = useContext(Context);
+
     return (
-        <ListGroup className="mt-3">
+        <ListGroup>
             {device.types.map(type =>
                 <ListGroupItem
                     key={type.id}

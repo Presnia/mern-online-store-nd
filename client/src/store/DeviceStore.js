@@ -11,7 +11,14 @@ export default class DeviceStore {
         ];
         this._brands = [
             {id: 1, name: 'Apple'},
-            {id: 2, name: 'Samsung'}
+            {id: 2, name: 'Samsung'},
+            {id: 3, name: 'Lenovo'},
+            {id: 4, name: 'Asus'},
+            {id: 5, name: 'Dell'},
+            {id: 6, name: 'Xiaomi'},
+            {id: 7, name: 'Nokia'},
+            {id: 8, name: 'Honor'},
+            {id: 9, name: 'Vertex'},
         ];
         this._devices = [
             {id: 1, name: 'iPhone 13 Pro', price: 2500, rating: 5, img: `https://shop.mts.by/upload/resize_cache/iblock/311/600_900_1/iPhone_13_Pro_gold_1.jpg`},
@@ -22,6 +29,7 @@ export default class DeviceStore {
 
         ];
         this._selectedType = {}
+        this._selectedBrand = {}
         makeAutoObservable(this);
     }
 
@@ -37,6 +45,9 @@ export default class DeviceStore {
     setSelectedType(type) {
         this._selectedType = type;
     }
+    setSelectedBrand(brand) {
+        this._selectedBrand = brand;
+    }
 
     get types() {
         return this._types;
@@ -49,5 +60,8 @@ export default class DeviceStore {
     }
     get selectedType() {
         return this._selectedType;
+    }
+    get selectedBrand() {
+        return this._selectedBrand;
     }
 }
