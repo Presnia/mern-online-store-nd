@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
+import { NavLink } from 'react-router-dom';
 import {Context} from "../index";
-import {Button, Container, Nav, Navbar, NavLink} from "react-bootstrap";
+import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import {SHOP_ROUTE} from "../utils/consts";
 import {observer} from "mobx-react-lite";
 
@@ -12,7 +13,7 @@ const NavBar = observer(() => {
             <Container>
                 <NavLink
                     to={SHOP_ROUTE}
-                    style={{color: 'white'}}
+                    style={{color: 'tomato', textDecoration: 'none'}}
                 >
                     BuyDevice
                 </NavLink>

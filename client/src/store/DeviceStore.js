@@ -3,9 +3,11 @@ import {makeAutoObservable} from "mobx";
 export default class DeviceStore {
     constructor() {
         this._types = [
-            {id: 1, name: 'Laptops'},
-            {id: 2, name: 'Desktops'},
-            {id: 3, name: 'Smartphones'}
+            {id: 1, name: 'Laptop'},
+            {id: 2, name: 'Desktop'},
+            {id: 3, name: 'Smartphone'},
+            {id: 4, name: 'Tablet'},
+            {id: 5, name: 'TV'},
         ];
         this._brands = [
             {id: 1, name: 'Apple'},
@@ -19,6 +21,7 @@ export default class DeviceStore {
             {id: 5, name: 'iPhone 12 Pro', price: 2500, rating: 5, img: `https://shop.mts.by/upload/resize_cache/iblock/05a/600_900_1/iphone-12-pro-max-gold_1.jpg`},
 
         ];
+        this._selectedType = {}
         makeAutoObservable(this);
     }
 
@@ -31,6 +34,9 @@ export default class DeviceStore {
     setDevices(devices) {
         this._devices = devices;
     }
+    setSelectedType(type) {
+        this._selectedType = type;
+    }
 
     get types() {
         return this._types;
@@ -40,5 +46,8 @@ export default class DeviceStore {
     }
     get devices() {
         return this._devices;
+    }
+    get selectedType() {
+        return this._selectedType;
     }
 }
