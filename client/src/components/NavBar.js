@@ -30,7 +30,7 @@ const NavBar = observer(() => {
                             variant={'outline-light'}
                             onClick={() => history.push(LOGIN_ROUTE)} className="ml-3"
                         >
-                            Logout
+                            Login
                         </Button>
                     </Nav>
                     :
