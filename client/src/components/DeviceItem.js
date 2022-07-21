@@ -10,7 +10,7 @@ const DeviceItem = ({device}) => {
     return (
         <Col md={3} className="p-0" onClick={() => history.push(DEVICE_ROUTE + '/' + device.id)}>
             <Card style={{width: 170, cursor: 'pointer', border: 'light', borderRadius: 16}} className="mt-3 p-2">
-                <Image src={device.img} width={150} height={200} style={{backgroundSize: 'contain'}}/>
+                <Image src={process.env.REACT_APP_API_URL + device.img} width={150} height={200} style={{backgroundSize: 'contain'}}/>
                 <section className="pl-1 pr-1">
                     <section className="d-flex justify-content-between align-items-center mt-1 text-black-50">
                         <div>Apple</div>

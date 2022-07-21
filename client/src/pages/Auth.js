@@ -20,10 +20,8 @@ const Auth = observer(() => {
 
             if (isLogin) {
                 data = await login(email, password);
-                console.log(data)
             } else {
                 data = await registration(email, password);
-                console.log(data)
             }
             user.setUser(user);
             user.setIsAuth(true);
@@ -52,7 +50,7 @@ const Auth = observer(() => {
                         placeholder="Enter Your password..."
                         value={password}
                         onChange={e => setPassword(e.target.value)}
-                        type="password"
+                        type="current-password"
                     />
                     <Row className="d-flex justify-content-between mt-3 pl-3 pr-3">
                         {isLogin ?
