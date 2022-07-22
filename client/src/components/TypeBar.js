@@ -7,7 +7,7 @@ const TypeBar = observer(() => {
     const {device} = useContext(Context);
 
     return (
-        <ListGroup>
+        <ListGroup  style={{borderRadius: 16}}>
             {device.types.map(type =>
                 <ListGroupItem
                     key={type.id}
